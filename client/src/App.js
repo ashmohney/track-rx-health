@@ -22,5 +22,9 @@ function App() {
     </div>
   );
 }
+// router
+// div  routes go here 8:56 video 20.2
+// /div
+// /router
 
 export default App;
