@@ -24,6 +24,7 @@ function App() {
 }
 // router
 // div  routes go here 8:56 video 20.2
+// at 1.26.00 at shutdown
 // /div
 // /router
 
