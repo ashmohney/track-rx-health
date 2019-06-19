@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 function Nav() {
   return (
@@ -6,6 +8,14 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Track-Rx
       </a>
+      <ul>
+        <li>
+          <Link to="/">Your Meds</Link>
+        </li>
+        <li>
+          <Link to="/addmed">Add New Med</Link>
+        </li>
+      </ul>
     </nav>
   );
 }

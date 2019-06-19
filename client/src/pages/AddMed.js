@@ -52,6 +52,7 @@ class AddMed extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>New Medication</h1>
+              <hr />
             </Jumbotron>
             <form>
               <Input

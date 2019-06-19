@@ -61,23 +61,23 @@ class Meds extends Component {
             <Jumbotron>
               <h1>Your Medications</h1>
               <hr />
-              {this.state.meds.length ? (
-                <List>
-                  {this.state.meds.map(meds => (
-                    <ListItem key={meds._id}>
-                      <Link to={"/meds/" + meds._id}>
-                        <strong>
-                          Name: {meds.name} -- Frequency: {meds.frequency}
-                        </strong>
-                      </Link>
-                      <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
-                    </ListItem>
-                  ))}
-                </List>
-              ) : (
-                <h3>No Results to Display</h3>
-              )}
             </Jumbotron>
+            {this.state.meds.length ? (
+              <List>
+                {this.state.meds.map(meds => (
+                  <ListItem key={meds._id}>
+                    <Link to={"/meds/" + meds._id}>
+                      <strong>
+                        Name: {meds.name} -- Frequency: {meds.frequency}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
           </Col>
         </Row>
 
