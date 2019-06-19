@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Meds extends Component {
   state = {
@@ -40,76 +40,48 @@ class Meds extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.name && this.state.frequency) {
-      API.saveMeds({
-        name: this.state.name,
-        frequency: this.state.frequency,
-        notes: this.state.notes
-      })
-        .then(res => this.loadMeds())
-        .catch(err => console.log(err));
-    }
-  };
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.name && this.state.frequency) {
+  //     API.saveMeds({
+  //       name: this.state.name,
+  //       frequency: this.state.frequency,
+  //       notes: this.state.notes
+  //     })
+  //       .then(res => this.loadMeds())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   render() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12 sm-12">
             <Jumbotron>
-              <h1>New Medication</h1>
+              <h1>Your Medications</h1>
+              <hr />
+              {this.state.meds.length ? (
+                <List>
+                  {this.state.meds.map(meds => (
+                    <ListItem key={meds._id}>
+                      <Link to={"/meds/" + meds._id}>
+                        <strong>
+                          Name: {meds.name} -- Frequency: {meds.frequency}
+                        </strong>
+                      </Link>
+                      <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
             </Jumbotron>
-            <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Medication Name (required)"
-              />
-              <Input
-                value={this.state.frequency}
-                onChange={this.handleInputChange}
-                name="frequency"
-                placeholder="How Often? (required)"
-              />
-              <TextArea
-                value={this.state.notes}
-                onChange={this.handleInputChange}
-                name="notes"
-                placeholder="Any Notes? (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.frequency && this.state.name)}
-                onClick={this.handleFormSubmit}
-              >
-                Add Medication
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>My Medications</h1>
-            </Jumbotron>
-            {this.state.meds.length ? (
-              <List>
-                {this.state.meds.map(meds => (
-                  <ListItem key={meds._id}>
-                    <Link to={"/meds/" + meds._id}>
-                      <strong>
-                        Name: {meds.name} -- Frequency: {meds.frequency}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
           </Col>
         </Row>
+
+        {/* ADD BUTTON to addmed HERE */}
       </Container>
     );
   }

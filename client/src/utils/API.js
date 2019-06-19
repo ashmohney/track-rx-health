@@ -16,5 +16,9 @@ export default {
   // Saves a med to the database
   saveMeds: function(medsData) {
     return axios.post("/api/meds", medsData);
+  },
+  // Adds a med to the database
+  addMeds: function(medsData) {
+    return axios.post("/api/addmed", medsData);
   }
 };
