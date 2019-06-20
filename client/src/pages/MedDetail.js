@@ -22,19 +22,19 @@ class MedDetail extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>{this.state.meds.name}:</h1>
-              <p>{this.state.meds.frequency}</p>
               <article>
+                <h1>{this.state.meds.name}:</h1>
+                <p>{this.state.meds.frequency}</p>
+
                 <h1>Notes: </h1>
                 <p>{this.state.meds.notes}</p>
               </article>
             </Jumbotron>
           </Col>
-
-          <ReturnBtn>
-            <Link to="/">← Return to Your Current Medications List</Link>
-          </ReturnBtn>
         </Row>
+        <ReturnBtn>
+          <Link to="/">← Return to Your Current Medications List</Link>
+        </ReturnBtn>
       </Container>
     );
   }

@@ -9,6 +9,7 @@ import { List, ListItem } from "../components/List";
 
 class Meds extends Component {
   state = {
+    user: "",
     meds: [],
     name: "",
     frequency: "",
@@ -40,25 +41,13 @@ class Meds extends Component {
     });
   };
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.name && this.state.frequency) {
-  //     API.saveMeds({
-  //       name: this.state.name,
-  //       frequency: this.state.frequency,
-  //       notes: this.state.notes
-  //     })
-  //       .then(res => this.loadMeds())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
-
   render() {
     return (
       <Container fluid>
         <Row>
           <Col size="md-12 sm-12">
             <Jumbotron>
+              <h1>Welcome {this.state.user || "user-default"},</h1>
               <h1>Your Medications</h1>
               <hr />
             </Jumbotron>

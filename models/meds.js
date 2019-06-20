@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const medsSchema = new Schema({
+  user: { type: String, required: true },
   name: { type: String, required: true },
   frequency: { type: String, required: true },
   notes: String,
