@@ -47,7 +47,7 @@ class Meds extends Component {
         <Row>
           <Col size="md-12 sm-12">
             <Jumbotron>
-              <h1>Welcome {this.state.user || "user-default"},</h1>
+              <h1>Welcome,</h1>
               <h1>Your Medications</h1>
               <hr />
             </Jumbotron>

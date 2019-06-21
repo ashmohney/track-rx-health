@@ -1,26 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Meds from "./pages/Medslist";
-import MedDetail from "./pages/MedDetail";
+import UserRouter from "./Routes/UserRouter.js";
 import NoMatch from "./pages/NoMatch";
-import AddMed from "./pages/AddMed";
-import Nav from "./components/Nav";
+import HomePage from "./pages/HomePage";
+import CreateAccount from "./pages/CreateAccount";
+import PrivateRoute from "./components/Auth";
 
-function App() {
-  return (
-    <Router>
+class App extends Component {
+  render() {
+    return (
       <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Meds} />
-          <Route exact path="/meds" component={Meds} />
-          <Route exact path="/meds/:id" component={MedDetail} />
-          <Route exact path="/addmed" component={AddMed} />
-          <Route component={NoMatch} />
-        </Switch>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/createAccount" component={CreateAccount} />
+            <PrivateRoute path="/users" render={_props => <UserRouter />} />
+            <Route component={NoMatch} />
+          </Switch>
+        </Router>
       </div>
-    </Router>
-  );
+    );
+  }
 }
 
 export default App;

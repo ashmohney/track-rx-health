@@ -1,9 +1,10 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const db = require("./models");
+const passport = require("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,11 +13,28 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// Passport
+app.use(require("cookie-parser")());
+app.use(
+  require("express-session")({
+    secret: "password",
+    resave: false,
+    saveUninitialized: false
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Add routes, both API and view
+require("./routes/authentication")(app);
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/medicationslist", { useNewUrlParser: true } );
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/medicationslist",
+  { useNewUrlParser: true }
+);
 
 // Start the API server
 app.listen(PORT, function() {
