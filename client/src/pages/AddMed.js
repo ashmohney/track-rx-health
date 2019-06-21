@@ -13,17 +13,6 @@ class AddMed extends Component {
     frequency: "",
     notes: ""
   };
-  // componentDidMount() {
-  //   this.loadMeds();
-  // }
-
-  // loadMeds = () => {
-  //   API.getMeds()
-  //     .then(res =>
-  //       this.setState({ meds: res.data, name: "", frequency: "", notes: "" })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;

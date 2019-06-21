@@ -69,8 +69,6 @@ class Meds extends Component {
             )}
           </Col>
         </Row>
-
-        {/* ADD BUTTON to addmed HERE */}
       </Container>
     );
   }
