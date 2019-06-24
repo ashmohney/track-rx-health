@@ -15,7 +15,7 @@ function ReturnBtn(props) {
       className="btn btn-info"
     >
       {/* {props.children} */}
-      <Link className="link" to="/">
+      <Link className="link" to="/users">
         ← Return to Your Medications
       </Link>
     </button>

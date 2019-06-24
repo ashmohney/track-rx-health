@@ -28,7 +28,7 @@ class UserNav extends Component {
     return (
       <Container fluid classes="navbar-container">
         <nav className="navbar navbar-expand-lg navbar-dark bg-info ">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="/users">
             Track-Rx
           </a>
           <ul>
@@ -38,10 +38,10 @@ class UserNav extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/">Your Meds</Link>
+              <Link to="/users">Your Meds</Link>
             </li>
             <li>
-              <Link to="/addmed">Add New Med</Link>
+              <Link to="/users/addmed">Add New Med</Link>
             </li>
           </ul>
         </nav>

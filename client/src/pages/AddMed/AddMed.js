@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
+import Jumbotron from "../../components/Jumbotron";
+import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { Input, TextArea, FormBtn } from "../components/Form";
-import ReturnBtn from "../components/ReturnBtn";
+import { Col, Row, Container } from "../../components/Grid";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+import ReturnBtn from "../../components/ReturnBtn";
 
 class AddMed extends Component {
   state = {

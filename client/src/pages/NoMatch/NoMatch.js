@@ -1,7 +1,7 @@
-//ripped from class activity 
+//ripped from class activity
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import { Col, Row, Container } from "../../components/Grid";
+import Jumbotron from "../../components/Jumbotron";
 
 function NoMatch() {
   return (

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
+import DeleteBtn from "../../components/DeleteBtn";
+import Jumbotron from "../../components/Jumbotron";
+import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Meds extends Component {
@@ -55,7 +55,7 @@ class Meds extends Component {
               <List>
                 {this.state.meds.map(meds => (
                   <ListItem key={meds._id}>
-                    <Link to={"/meds/" + meds._id}>
+                    <Link to={"/users/meds/" + meds._id}>
                       <strong>
                         Name: {meds.name} -- Frequency: {meds.frequency}
                       </strong>

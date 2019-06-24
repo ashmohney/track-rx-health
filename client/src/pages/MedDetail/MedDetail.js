@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import API from "../utils/API";
-import Jumbotron from "../components/Jumbotron";
-import ReturnBtn from "../components/ReturnBtn";
+// import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../../components/Grid";
+import API from "../../utils/API";
+import Jumbotron from "../../components/Jumbotron";
+import ReturnBtn from "../../components/ReturnBtn";
 
 class MedDetail extends Component {
   state = {
@@ -32,9 +32,7 @@ class MedDetail extends Component {
             </Jumbotron>
           </Col>
         </Row>
-        <ReturnBtn>
-          <Link to="/">← Return to Your Current Medications List</Link>
-        </ReturnBtn>
+        <ReturnBtn />
       </Container>
     );
   }
