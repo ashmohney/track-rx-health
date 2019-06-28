@@ -5,6 +5,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
+import Nav from "../../components/Nav";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Meds extends Component {
@@ -43,33 +44,36 @@ class Meds extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12 sm-12">
-            <Jumbotron>
-              <h1>Welcome,</h1>
-              <h1>Your Medications</h1>
-              <hr />
-            </Jumbotron>
-            {this.state.meds.length ? (
-              <List>
-                {this.state.meds.map(meds => (
-                  <ListItem key={meds._id}>
-                    <Link to={"/users/meds/" + meds._id}>
-                      <strong>
-                        Name: {meds.name} -- Frequency: {meds.frequency}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Nav />
+        <Container fluid>
+          <Row>
+            <Col size="md-12 sm-12">
+              <Jumbotron>
+                <h1>Your Medications</h1>
+
+                <hr />
+              </Jumbotron>
+              {this.state.meds.length ? (
+                <List>
+                  {this.state.meds.map(meds => (
+                    <ListItem key={meds._id}>
+                      <Link to={"/users/meds/" + meds._id}>
+                        <strong>
+                          Name: {meds.name} -- Frequency: {meds.frequency}
+                        </strong>
+                      </Link>
+                      <DeleteBtn onClick={() => this.deleteMeds(meds._id)} />
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }

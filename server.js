@@ -35,10 +35,11 @@ mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/medicationslist", {
     useNewUrlParser: true
   })
-  .then(() => console.log("MongoDB successfully connected"))
+  .then(() => {
+    app.listen(PORT, function() {
+      console.log(`==> API Server now listening on PORT ${PORT}!`);
+    });
+  })
   .catch(err => console.log(err));
 
 // Start the API server
-app.listen(PORT, function() {
-  console.log(`==> API Server now listening on PORT ${PORT}!`);
-});
