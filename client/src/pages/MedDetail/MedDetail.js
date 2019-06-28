@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron";
 import ReturnBtn from "../../components/ReturnBtn";
+import Nav from "../../components/Nav";
 
 class MedDetail extends Component {
   state = {
@@ -18,22 +19,25 @@ class MedDetail extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <article>
-                <h1>{this.state.meds.name}:</h1>
-                <p>{this.state.meds.frequency}</p>
+      <div>
+        <Nav />
+        <Container fluid>
+          <Row>
+            <Col size="md-12">
+              <Jumbotron>
+                <article>
+                  <h1>{this.state.meds.name}:</h1>
+                  <p>{this.state.meds.frequency}</p>
 
-                <h1>Notes: </h1>
-                <p>{this.state.meds.notes}</p>
-              </article>
-            </Jumbotron>
-          </Col>
-        </Row>
-        <ReturnBtn />
-      </Container>
+                  <h3>Notes: </h3>
+                  <p>{this.state.meds.notes}</p>
+                </article>
+              </Jumbotron>
+            </Col>
+          </Row>
+          <ReturnBtn />
+        </Container>
+      </div>
     );
   }
 }

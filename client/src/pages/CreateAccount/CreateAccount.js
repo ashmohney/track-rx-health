@@ -36,7 +36,7 @@ export default class Login extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/users",
+            pathname: "/users/meds/",
             state: { from: this.props.location }
           }}
         />
