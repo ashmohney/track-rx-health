@@ -9,7 +9,7 @@
 - Reactjs
 - Passport
 
-### Sign in to try out the app via Heroku <a href="https://" target="blank">here.</a>
+### Sign in to try out the app via Heroku <a href="https://serene-cove-27112.herokuapp.com/" target="blank">here.</a>
 
 Username: user1
 Password: password
