@@ -15,11 +15,11 @@
 Username: user1
 Password: password
 
-List of your medications:
+## List of your medications:
     <img alt="Screenshot of medications list" src="/images/med-list.png">
-Add a medication to your list:
+## Add a medication to your list:
     <img alt="Screenshot of add medication form" src="/images/add-med.png">
-View details about your medication:
+## View details about your medication:
     <img alt="Screenshot medication detail view" src="/images/med-detail.png">
 
 ### Start the app locally:
