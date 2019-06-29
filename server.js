@@ -32,9 +32,13 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/medicationslist", {
-    useNewUrlParser: true
-  })
+  .connect(
+    process.env.MONGODB_URI ||
+      "mongodb://user:password123@ds245387.mlab.com:45387/heroku_t6dz0wlh",
+    {
+      useNewUrlParser: true
+    }
+  )
   .then(() => {
     app.listen(PORT, function() {
       console.log(`==> API Server now listening on PORT ${PORT}!`);
