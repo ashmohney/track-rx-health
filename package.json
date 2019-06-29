@@ -1,6 +1,10 @@
 {
   "name": "track-rx-health",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "description": "medication tracking app",
   "main": "server.js",
   "scripts": {
