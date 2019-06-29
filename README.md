@@ -14,7 +14,8 @@
 Username: user1
 Password: password
 
-## List of your medications:
+List of your medications:
+_______________________________________________________________________________________________
 
     <img alt="Screenshot of medications list" src="/images/med-list.png">
 
