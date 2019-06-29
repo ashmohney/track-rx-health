@@ -9,25 +9,22 @@
 - Reactjs
 - Passport
 
-### Sign in to try out the app via Heroku here
+### Sign in to try out the app via Heroku <a href="https://" target="blank">here.</a>
 
 Username: user1
 Password: password
 
 ### List of your medications:
 _______________________________________________________________________________________________
-
-    <img alt="Screenshot of medications list" src="images/med-list.png">
+<img alt="Screenshot of medications list" src="images/med-list.png">
 
 ### Add a medication to your list:
 _______________________________________________________________________________________________
-
-    <img alt="Screenshot of add medication form" src="images/add-med.png">
+<img alt="Screenshot of add medication form" src="images/add-med.png">
 
 ### View details about your medication:
 _______________________________________________________________________________________________
-
-    <img alt="Screenshot medication detail view" src="images/med-detail.png">
+<img alt="Screenshot medication detail view" src="images/med-detail.png">
 
 ### Start the app locally:
 
