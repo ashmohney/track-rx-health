@@ -48,7 +48,7 @@ export default class Login extends Component {
           <div className="card">
             <div className="card-header">
               <p />
-              <h3>Sign in</h3>
+              <h3>Sign in to Track Rx</h3>
             </div>
 
             <div className="card-body">

@@ -47,7 +47,7 @@ export default class Login extends Component {
         <div className="card">
           <div className="card-header">
             <p />
-            <h3>Create Account</h3>
+            <h3>Create Account for Track Rx</h3>
           </div>
 
           <div className="card-body">
