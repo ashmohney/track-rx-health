@@ -33,7 +33,7 @@ class UserNav extends Component {
           </a>
           <ul>
             <li id="logout">
-              <Link to="#" className="button" onClick={this.logout}>
+              <Link to="/" className="button" onClick={this.logout}>
                 Log Out
               </Link>
             </li>

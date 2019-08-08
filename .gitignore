@@ -13,3 +13,4 @@
 .env.production.local
 .env
 
+yarn.lock
